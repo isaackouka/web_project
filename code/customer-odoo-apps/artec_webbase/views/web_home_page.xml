@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <template id="artec_web_home" inherit_id="website.homepage">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <section style="background-color: #ffffff;">
+                <div class="text-center container py-5">
+                    <div class="mt-4 mb-5">
+                        <h3 style="color:#061c1c">
+                            <strong>make your ouwn product, start your ouwn brand</strong>
+                        </h3>
+                        <p class="mt-4 mb-5" style="color:#9f9f9f">
+                            <strong>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                                <br></br>
+                                eos et accusam et justo duo dolores et ea rebum
+                            </strong>
+                        </p>
+                    </div>
+
+                    <div class="row">
+                        <t t-foreach="category" t-as="categ">
+                            <div class="col-lg-4 col-md-12 mb-4">
+                                <a t-attf-href="/categ/#{categ.id}">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-3">
+                                                <span t-esc="categ.display_name" />
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </t>
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <div class="mt-4 mb-5">
+                        <h3 style="color:#061c1c">
+                            <strong>what do we offer ?</strong>
+                        </h3>
+                    </div>
+                </div>
+
+            </section>
+            <div class="text-center" style="background-color:#061c1c; color:white">
+                our process
+            </div>
+            <footer class="text-center text-lg-start bg-light text-muted">
+                <section class="">
+                    <div class="container text-center text-md-start mt-5">
+                        <div class="row mt-3">
+                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                <h6 class="text-uppercase fw-bold mb-4">
+                                    <i class="fas fa-gem me-3"></i>
+                                    white label
+                                </h6>
+                                <p>
+                                    <a href="#!" class="text-reset">cosmetics</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">bio products</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">perfurmry</a>
+                                </p>
+
+                            </div>
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <h6 class="text-uppercase fw-bold mb-4">
+                                    navigate
+                                </h6>
+                                <p>
+                                    <a href="#!" class="text-reset">copyrights</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">privacy policy</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">terms of use</a>
+                                </p>
+                            </div>
+                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <h6 class="text-uppercase fw-bold mb-4">
+                                    contact us
+                                </h6>
+                                <p>
+                                    <a href="#!" class="text-reset">rue bousshaqui</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">bab ezzouar</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">16024 , alger</a>
+                                </p>
+                            </div>
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                <h6 class="text-uppercase fw-bold mb-4">address :</h6>
+                                <p>
+                                    <i class="fas fa-home me-3"></i>
+                                    Rue bousshaqui , Bab ezzouar 16024 , Alger
+                                </p>
+                                <h6 class="text-uppercase fw-bold mb-4">phone :</h6>
+                                <p>
+                                    <i class="fas fa-phone me-3"></i>
+                                    +213 557 38 92 28
+                                </p>
+                                <h6 class="text-uppercase fw-bold mb-4">email :</h6>
+                                <p>
+                                    <i class="fas fa-phone me-3"></i>
+                                    whitelabel@official.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                    © all rights reserved to white label
+                </div>
+            </footer>
+        </xpath>
+    </template>
+</odoo>

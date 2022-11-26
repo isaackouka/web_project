@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="product_page">
+            <t t-call="website.layout">
+                <section style="background-color: #ffffff;">
+                    <div class="text-center container py-5">
+                        <div class="row">
+                            <t t-foreach="products or []" t-as="product">
+                                <div class="col-lg-4 col-md-12 mb-4">
+                                    <a t-attf-href="/product/#{product['id']}">
+                                        <div class="card">
+                                            <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                                                data-mdb-ripple-color="light">
+                                                <t t-if="product['image_1920']">
+                                                    <img t-att-src="image_data_uri(product['image_1920'])" class="w-100" />
+                                                </t>
+                                                <div class="hover-overlay">
+                                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                </div>
+                                            </div>
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-3">
+                                                    <span t-esc="product['name']" />
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </section>
+            </t>
+        </template>
+    </data>
+
+    <!-- <data>
+        <record id="menu_our_products" model="website.menu">
+            <field name="name">our products</field>
+            <field name="url">/all_products</field>
+            <field name="parent_id" ref="website.main_menu" />
+            <field name="sequence" type="int">80</field>
+        </record>
+    </data> -->
+
+</odoo>
