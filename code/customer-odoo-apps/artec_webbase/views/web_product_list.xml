@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="website">
+    <template id="artec_product_list">
         <t t-call="website.layout">
             <section style="background-color: #ffffff;">
                 <div class="text-center mt-4 mb-5">
@@ -15,6 +15,7 @@
                         </strong>
                     </p>
                 </div>
+
                 <!-- <div class="text-center mt-4 mb-5" style="background-color:#b0d6d6;height:100px">
                     <div class="mt-5">
                         <button style="background-color:#061b1b" type="button" class="btn btn-primary">make your own product</button>
@@ -23,7 +24,10 @@
 
                 <form action="/product/send/" method="post" class="s_website_form container-fluid mt32 o_fake_not_editable" enctype="multipart/form-data" data-name="Form Builder" data-model_name="crm.lead" data-success_page="/thank">
                     <div class="text-center container py-5">
-                        <h5 class="text-left">choose your product</h5>
+                        <div style="display: flex; text-align: left;">
+                            <div style="width: 25px;height: 25px;background-color: #c7c7c7;border-radius: 15px;"></div>
+                            <h5 class="text-left ml-2">choose your product</h5>
+                        </div>
                         <br></br>
                         <div class="row">
                             <t t-foreach="products or []" t-as="product">
@@ -43,7 +47,8 @@
                                                         <span t-esc="product['name']" />
                                                     </h3>
                                                     <h3>
-                                                        <span t-esc="product['list_price']" /> DA
+                                                        <span t-esc="product['list_price']" />
+                                                        DA
                                                     </h3>
                                                 </div>
                                             </div>
@@ -75,10 +80,43 @@
                     </div>
 
                     <div class="text-center container py-5">
+                        <div style="display: flex; text-align: left;">
+                            <div style="width: 25px;height: 25px;background-color: #c7c7c7;border-radius: 15px;"></div>
+                            <h5 class="text-left ml-2">choose your package</h5>
+                        </div>
+                        <br></br>
+                        <br></br>
+                        <div class="row">
+                            <t t-foreach="packages or []" t-as="package">
+                                <div class="col-sm-3">
+                                    <div class="quiz_card_area">
+                                        <input name="package_id" t-att-id="package_id" class="quiz_checkbox" type="radio" t-att-value="package['id']" />
+                                        <div class="single_quiz_card">
+                                            <div class="quiz_card_content">
+                                                <div class="quiz_card_icon">
+                                                    <t t-if="package['image']">
+                                                        <img t-att-src="image_data_uri(package['image'])" style="width:100%; height: 170px;" />
+                                                    </t>
+                                                </div>
+                                                <div class="quiz_card_title">
+                                                    <h3>
+                                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                                        <span t-esc="package['name']" />
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+
+                    <div class="text-center container py-5">
                         <h5 class="text-left">make your order now</h5>
                         <br></br>
                         <div class="mb-3">
-                            <input name="name" id="name" type="text" class="form-control"  placeholder="enter your name" />
+                            <input name="name" id="name" type="text" class="form-control" placeholder="enter your name" />
                         </div>
                         <div class="mb-3 row">
                             <div class="col">
@@ -101,5 +139,6 @@
                 </form>
             </section>
         </t>
+        <t t-call="artec_webbase.artec_footer"/>
     </template>
 </odoo>

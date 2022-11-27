@@ -1,41 +1,40 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "name": "Python: Dev",
-        "type": "python",
-        "request": "launch",
-        "program": "~/src/odoo/15.0/odoo-bin",
-        "console": "integratedTerminal",
-        "args": ["-c", "${workspaceRoot}/bin/zakaria_web.cfg","-u","artec_webbase"]
-      },
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Dev",
+      "type": "python",
+      "request": "launch",
+      "program": "~/src/odoo/15.0/odoo-bin",
+      "console": "integratedTerminal",
+      "args": ["-c", "${workspaceRoot}/bin/cos_crm.cfg","-u","artec_webbase"]
+    },
 
-      {
-        "name": "Python: Shell",
-        "type": "python",
-        "request": "launch",
-        "program": "~/src/odoo/15.0/odoo-bin",
-        "console": "integratedTerminal",
-        "args": ["shell", "-c", "${workspaceRoot}/bin/zakaria_web.cfg"]
-      },
+    {
+      "name": "Python: Shell",
+      "type": "python",
+      "request": "launch",
+      "program": "~/src/odoo/15.0/odoo-bin",
+      "console": "integratedTerminal",
+      "args": ["shell", "-c", "${workspaceRoot}/bin/cos_crm.cfg"]
+    },
 
-      {
-        "name": "Python: Init",
-        "type": "python",
-        "request": "launch",
-        "program": "~/src/odoo/15.0/odoo-bin",
-        "console": "integratedTerminal",
-        "args": ["-i", "base", "-d", "zakaria-db"]
-      },
-  
-      {
-        "name": "Python: Default",
-        "type": "python",
-        "request": "launch",
-        "program": "~/src/odoo/15.0/odoo-bin",
-        "console": "integratedTerminal",
-        "args": []
-      }
-    ]
-  }
-  
+    {
+      "name": "Python: Init",
+      "type": "python",
+      "request": "launch",
+      "program": "~/src/odoo/15.0/odoo-bin",
+      "console": "integratedTerminal",
+      "args": ["-i", "base", "-d", "cosmetique-db"]
+    },
+
+    {
+      "name": "Python: Default",
+      "type": "python",
+      "request": "launch",
+      "program": "~/src/odoo/15.0/odoo-bin",
+      "console": "integratedTerminal",
+      "args": []
+    }
+  ]
+}

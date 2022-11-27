@@ -13,15 +13,21 @@ class WebController(http.Controller):
     @http.route('/', auth='public', type='http', website=True, csrf=False)
     def home_page(self,**kw):
         category = http.request.env['product.public.category'].sudo().search([('product_tmpl_ids','!=',False)])
+        products = http.request.env['product.template'].sudo().search([],limit=6)
+        
         return request.render("artec_webbase.artec_web_home",{
-            "category":category
+            "products":products,
+            "category":category,
         })
 
     @http.route('/categ/<int:categ_id>',  auth='public', type='http', website=True, csrf=False)
     def product_by_categ(self, categ_id):
         products = http.request.env['product.template'].sudo().search_read([('public_categ_ids','in',categ_id)],['id','name','image_1920','list_price'])
-        return request.render("artec_webbase.website",{
-            "products":products
+        packages = http.request.env['artec.product.package'].sudo().search_read([('categ_ids','in',categ_id)],['id','name','image'])
+
+        return request.render("artec_webbase.artec_product_list",{
+            "products":products,
+            "packages":packages,
         })
 
     @http.route('/product/<int:product_id>',  auth='public', type='http', website=True, csrf=False)

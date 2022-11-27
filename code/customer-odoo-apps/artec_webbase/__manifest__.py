@@ -7,7 +7,7 @@
     'category': '',
     'version': '0.1',
 
-    'depends': ['base', 'mail', 'contacts', 'product', 'website_sale', 'web', 'crm'],
+    'depends': ['base', 'mail', 'contacts', 'product', 'website_sale', 'web', 'crm', 'stock'],
 
     'assets': {
         'web.assets_qweb': [],
@@ -18,9 +18,11 @@
     },
 
     'data': [
+        'security/ir.model.access.csv',
         'views/web_home_page.xml',
         'views/web_product_list.xml',
         'views/web_product_page.xml',
         'views/crm_lead_view_form.xml',
+        'views/product_package_view.xml',
     ],
 }

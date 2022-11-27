@@ -18,6 +18,56 @@
                     </div>
 
                     <div class="row">
+                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                            <img
+                                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                                class="w-100 shadow-1-strong rounded mb-4"
+                                alt="Boat on Calm Water"
+                                style="height: 30%;"
+                            />
+
+                            <img
+                                src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+                                class="w-100 shadow-1-strong rounded mb-4"
+                                alt="Wintry Mountain Landscape"
+                                style="height: 65%;"
+                            />
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <img
+                                src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+                                class="w-100 shadow-1-strong rounded mb-4"
+                                alt="Mountains in the Clouds"
+                                style="height: 65%;"
+                            />
+
+                            <img
+                                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                                class="w-100 shadow-1-strong rounded mb-4"
+                                alt="Boat on Calm Water"
+                                style="height: 30%;"
+                            />
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <img
+                                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+                                class="w-100 shadow-1-strong rounded mb-4"
+                                alt="Waves at Sea"
+                                style="height: 30%;"
+                            />
+
+                            <img
+                                src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+                                class="w-100 shadow-1-strong rounded mb-4"
+                                alt="Yosemite National Park"
+                                style="height: 65%;"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="row">
                         <t t-foreach="category" t-as="categ">
                             <div class="col-lg-4 col-md-12 mb-4">
                                 <a t-attf-href="/categ/#{categ.id}">
@@ -42,81 +92,119 @@
                 </div>
 
             </section>
-            <div class="text-center" style="background-color:#061c1c; color:white">
-                our process
+            <div class="card text-center " style="background-color:#061c1c;">
+                <div class="m-5" style="background-color:#061c1c;">
+                    <h5 class="card-title" style="color:#b0d6d6">our process</h5>
+                    <h3 class="card-text" style="color:#ffffff">we use a simple three steps process.</h3>
+                    <h3 class="card-text" style="color:#ffffff">take a look now.</h3>
+                </div>
+                <hr></hr>
+                <div>
+                    <span style="border: 2px solid;padding: 1% 1.5%; border-radius: 62px;font-size: 36px;color: white;">1</span>
+                </div>
+                <div class="m-5" style="background-color:#061c1c;">
+                    <h5 class="card-title" style="color:#b0d6d6">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        <br></br>
+                        eos et accusam et justo duo dolores et ea rebum
+                    </h5>
+                </div>
+                <hr style="color:#ffffff"></hr>
+                <div>
+                    <span style="border: 2px solid;padding: 1% 1.5%; border-radius: 62px;font-size: 36px;color: white;">2</span>
+                </div>
+                <div class="m-5" style="background-color:#061c1c;">
+                    <h5 class="card-title" style="color:#b0d6d6">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        <br></br>
+                        eos et accusam et justo duo dolores et ea rebum
+                    </h5>
+                </div>
+                <hr style="color:#ffffff"></hr>
+                <div>
+                    <span style="border: 2px solid;padding: 1% 1.5%; border-radius: 62px;font-size: 36px;color: white;">3</span>
+                </div>
+                <div class="m-5" style="background-color:#061c1c;">
+                    <h5 class="card-title" style="color:#b0d6d6">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        <br></br>
+                        eos et accusam et justo duo dolores et ea rebum
+                    </h5>
+                </div>
+                <hr></hr>
             </div>
-            <footer class="text-center text-lg-start bg-light text-muted">
-                <section class="">
-                    <div class="container text-center text-md-start mt-5">
-                        <div class="row mt-3">
-                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                                <h6 class="text-uppercase fw-bold mb-4">
-                                    <i class="fas fa-gem me-3"></i>
-                                    white label
-                                </h6>
-                                <p>
-                                    <a href="#!" class="text-reset">cosmetics</a>
-                                </p>
-                                <p>
-                                    <a href="#!" class="text-reset">bio products</a>
-                                </p>
-                                <p>
-                                    <a href="#!" class="text-reset">perfurmry</a>
-                                </p>
+            <t t-call="artec_webbase.artec_footer" />
+        </xpath>
+    </template>
 
-                            </div>
-                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                <h6 class="text-uppercase fw-bold mb-4">
-                                    navigate
-                                </h6>
-                                <p>
-                                    <a href="#!" class="text-reset">copyrights</a>
-                                </p>
-                                <p>
-                                    <a href="#!" class="text-reset">privacy policy</a>
-                                </p>
-                                <p>
-                                    <a href="#!" class="text-reset">terms of use</a>
-                                </p>
-                            </div>
-                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                                <h6 class="text-uppercase fw-bold mb-4">
-                                    contact us
-                                </h6>
-                                <p>
-                                    <a href="#!" class="text-reset">rue bousshaqui</a>
-                                </p>
-                                <p>
-                                    <a href="#!" class="text-reset">bab ezzouar</a>
-                                </p>
-                                <p>
-                                    <a href="#!" class="text-reset">16024 , alger</a>
-                                </p>
-                            </div>
-                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                                <h6 class="text-uppercase fw-bold mb-4">address :</h6>
-                                <p>
-                                    <i class="fas fa-home me-3"></i>
-                                    Rue bousshaqui , Bab ezzouar 16024 , Alger
-                                </p>
-                                <h6 class="text-uppercase fw-bold mb-4">phone :</h6>
-                                <p>
-                                    <i class="fas fa-phone me-3"></i>
-                                    +213 557 38 92 28
-                                </p>
-                                <h6 class="text-uppercase fw-bold mb-4">email :</h6>
-                                <p>
-                                    <i class="fas fa-phone me-3"></i>
-                                    whitelabel@official.com
-                                </p>
-                            </div>
+    <template id="artec_web_footer" inherit_id="website.footer_custom">
+        <xpath expr="//div[@id='footer']" position="replace"></xpath>
+    </template>
+
+    <template id="artec_footer">
+        <footer class="text-center text-lg-start bg-light text-muted">
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <div class="row mt-3">
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 m-5">
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <i class="fas fa-gem me-3"></i>
+                                white label
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">cosmetics</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">bio products</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">perfurmry</a>
+                            </p>
+
+                        </div>
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 m-5">
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                navigate
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">copyrights</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">privacy policy</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">terms of use</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 m-5">
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                contact us
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">rue bousshaqui</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">bab ezzouar</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">16024 , alger</a>
+                            </p>
+                        </div>
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 m-5">
+                            <h6 class="text-uppercase fw-bold mb-4">address :</h6>
+                            <p>
+                                <i class="fas fa-home me-3"></i>
+                                Rue bousshaqui , Bab ezzouar 16024 , Alger
+                            </p>
+                            <h6 class="text-uppercase fw-bold mb-4">phone : +213 557 38 92 28</h6>
+                            <h6 class="text-uppercase fw-bold mb-4">email : whitelabel@official.com</h6>
                         </div>
                     </div>
-                </section>
-                <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                    © all rights reserved to white label
                 </div>
-            </footer>
-        </xpath>
+            </section>
+            <!-- <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © all rights reserved to white label
+            </div> -->
+        </footer>
     </template>
 </odoo>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record model="ir.actions.act_window" id="product_package_list_action">
+        <field name="name">Product Package</field>
+        <field name="res_model">artec.product.package</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_similing_face">Add Packages
+            </p>
+        </field>
+    </record>
+
+    <record id="product_package_view_tree" model="ir.ui.view">
+        <field name="name">pieces_auto.mark.view.tree</field>
+        <field name="model">artec.product.package</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="categ_ids" widget="many2many_tags" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_package_view_form" model="ir.ui.view">
+        <field name="name">Packages</field>
+        <field name="model">artec.product.package</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <div class="row">
+                        <div class="col-3">
+                            <field name="image" widget="image" nolabel="1" options="{'preview_image': 'image_128','zoom':True ,'size':[200,200]}" />
+                        </div>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" string="Name of package" class="oe_edit_only" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <div class="oe_title">
+                        <label class="font-weight-bold mr-4" for="categ_ids" string="Category" />
+                        <field name="categ_ids" widget="many2many_tags" />
+                    </div>
+                    <!-- <group>
+                        <field name="categ_ids" widget="many2many_tags" />
+                    </group> -->
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="product_package_menu"
+        name="Packages"
+        parent="stock.menu_stock_inventory_control"
+        action="product_package_list_action"
+        sequence="5"
+    />
+
+</odoo>
